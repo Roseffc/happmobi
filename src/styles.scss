@@ -1,1 +1,116 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+$dark-primary-text: rgba(black, 0.87);
+$dark-secondary-text: rgba(black, 0.54);
+$dark-disabled-text: rgba(black, 0.38);
+$dark-dividers: rgba(black, 0.12);
+$dark-focused: rgba(black, 0.12);
+$light-primary-text: white;
+$light-secondary-text: rgba(white, 0.7);
+$light-disabled-text: rgba(white, 0.5);
+$light-dividers: rgba(white, 0.12);
+$light-focused: rgba(white, 0.12);
+
+$my-theme-primary: (
+  50: #feebf0,
+  100: #fcccd6,
+  200: #ed99a1,
+  300: #e3717d,
+  400: #ee4d5e,
+  500: #C61D35,
+  600: #e52f45,
+  700: #d3253e,
+  800: #c61d36,
+  900: #b70d2b,
+  A100: #ff8a80,
+  A200: #ff5252,
+  A400: #ff1744,
+  A700: #C61D35,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+$my-theme-secundary: (
+  50: #e7eefa,
+  100: #c8d5e4,
+  200: #a9b9cb,
+  300: #899cb3,
+  400: #7287a0,
+  500:#1D2B3A,
+  600: #4d657e,
+  700: #3e5267,
+  800: #2f3f51,
+  900: #1d2b3a,
+  A100:#1D2B3A,
+  A200:#1D2B3A,
+  A400:#1D2B3A,
+  A700:#1D2B3A,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$happmobi-primary: mat.define-palette($my-theme-primary);
+$happmobi-accent: mat.define-palette($my-theme-secundary, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$happmobi-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$happmobi-theme: mat.define-light-theme((
+  color: (
+    primary: $happmobi-accent,
+    accent: $happmobi-primary,
+    warn: $happmobi-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($happmobi-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import './app/styles/custom-material.scss';
