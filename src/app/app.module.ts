@@ -10,13 +10,19 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { LayoutAuthenticatedComponent } from './pages/layout/layout-authenticated/layout-authenticated.component';
 import { LayoutLoginComponent } from './pages/layout/layout-login/layout-login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './pages/header/header.component';
+import { FooterComponent } from './pages/footer/footer.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     LayoutAuthenticatedComponent,
-    LayoutLoginComponent
+    LayoutLoginComponent,
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +31,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatCheckboxModule,    
+    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

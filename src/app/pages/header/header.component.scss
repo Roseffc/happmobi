@@ -1,0 +1,20 @@
+.headerHome {
+  background-color:#1D2B3A;
+  height: 364px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__img {
+    height: 121px;
+    width: 123px;
+  }
+
+  &__title {
+    color: #ffff;
+    font-size: 21px;
+  }
+
+}
