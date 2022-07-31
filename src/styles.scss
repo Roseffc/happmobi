@@ -114,3 +114,7 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @import './app/styles/custom-material.scss';
+
+.m-0 {
+  margin: 0!important;
+}
