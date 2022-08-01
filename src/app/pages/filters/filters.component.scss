@@ -1,0 +1,63 @@
+.filters {
+
+  &__header {
+    height: 200px;
+    width: 428px;
+    background-color: #1D2B3A;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    color: #ffff;
+    font-size: 20px ;
+    margin-left: 6.1px;
+  }
+
+  &__tipos-checkbox {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__engine {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  &__btn-engine {
+    background-color: #fff;
+    width: 106px;
+    height: 38px;
+    cursor: pointer;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+  }
+
+  &__btn-engine--active {
+    background-color: #C61D35;
+    color: #fff;
+  }
+  &__btn-apply {
+    width: 354px;
+    height: 56px;
+    font-size: 20px;
+    margin-top: 19px;
+  }
+  &__apply-body {
+    display: flex;
+    justify-content: center;
+    height: 101px;
+  }
+
+}
+
+.btn-place {
+  width: 48px;
+  height: 38px;
+}

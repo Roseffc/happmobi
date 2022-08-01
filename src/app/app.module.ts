@@ -8,6 +8,8 @@ import { LoginComponent } from './pages/login/login.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { SwiperModule } from 'swiper/angular';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 
 import { LayoutAuthenticatedComponent } from './pages/layout/layout-authenticated/layout-authenticated.component';
@@ -17,6 +19,7 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CardCarComponent } from './pages/card-car/card-car.component';
 import { CarsService } from './services/cars.service';
+import { FiltersComponent } from './pages/filters/filters.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,8 @@ import { CarsService } from './services/cars.service';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    CardCarComponent
+    CardCarComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,8 @@ import { CarsService } from './services/cars.service';
     ReactiveFormsModule,
     MatButtonModule,
     MatCheckboxModule,
-    SwiperModule
+    SwiperModule,
+    MatExpansionModule
   ],
   providers: [CarsService],
   bootstrap: [AppComponent]

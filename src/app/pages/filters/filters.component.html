@@ -1,0 +1,83 @@
+<div class="filters">
+    <header class="filters__header">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22.083" height="22.083" viewBox="0 0 22.083 22.083">
+        <g id="noun-magnifying-glass-509619" transform="translate(4 326)">
+          <path id="Caminho_2030" data-name="Caminho 2030" d="M143.122,73.117a.969.969,0,0,1-1.4,0L136,67.4a9.04,9.04,0,1,1,1.4-1.4l5.715,5.715a.969.969,0,0,1,0,1.4Zm-7.77-17.7a7.019,7.019,0,1,0,0,9.926,6.99,6.99,0,0,0,0-9.926Z" transform="translate(-125.34 -377.334)" fill="#c61d35" fill-rule="evenodd"/>
+        </g>
+      </svg>
+      <span class="filters__title">BUSCA</span>
+    </header>
+    <div class="filters__tipos">
+      <mat-accordion [multi]="true">
+        <!-- tipos -->
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Tipos de carrocerias
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <form class="example-section" [formGroup]="formFilters">
+            <div class="filters__tipos-checkbox">
+              <div>
+                <p><mat-checkbox formControlName="hatchCompacto">hatchCompacto</mat-checkbox></p>
+                <p><mat-checkbox formControlName="hatchMedio">hatchMedio</mat-checkbox></p>
+                <p><mat-checkbox formControlName="suvCompacto">suvCompacto</mat-checkbox></p>
+                <p><mat-checkbox formControlName="suvMedio">suvMedio</mat-checkbox></p>
+                <p><mat-checkbox formControlName="suvGrande">suvGrande</mat-checkbox></p>
+                <p><mat-checkbox formControlName="crossover">crossover</mat-checkbox></p>
+                <p><mat-checkbox formControlName="coupe">coupe</mat-checkbox></p>
+                <p><mat-checkbox formControlName="picapeLeve">picapeLeve</mat-checkbox></p>
+              </div>
+              <div>
+                <p><mat-checkbox formControlName="picapeLeveMedia">picapeLeveMedia</mat-checkbox></p>
+                <p><mat-checkbox formControlName="picapeMedia">picapeMedia</mat-checkbox></p>
+                <p><mat-checkbox formControlName="sedanCompacto">sedanCompacto</mat-checkbox></p>
+                <p><mat-checkbox formControlName="sedanMedio">sedanMedio</mat-checkbox></p>
+                <p><mat-checkbox formControlName="sedanGrande">sedanGrande</mat-checkbox></p>
+                <p><mat-checkbox formControlName="minivanMonovolume">minivanMonovolume</mat-checkbox></p>
+                <p><mat-checkbox formControlName="utilitarioLeve">utilitarioLeve</mat-checkbox></p>
+                <p><mat-checkbox formControlName="utilitario">utilitario</mat-checkbox></p>
+              </div>
+            </div>
+          </form>
+        </mat-expansion-panel>
+        <!-- Motores -->
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Tipos de motores
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="filters__engine">
+            <button class="filters__btn-engine shadow"
+              *ngFor="let item of engineTypes"
+              [class.filters__btn-engine--active]="item.active"
+              (click)="onEngineFilter(item)"
+            >{{item.name}}
+            </button>
+          </div>
+        </mat-expansion-panel>
+        <!-- Lugures -->
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Quantidade de lugares
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="filters__engine">
+            <button class="filters__btn-engine btn-place shadow"
+              *ngFor="let item of placeAmounts"
+              [class.filters__btn-engine--active]="item.active"
+              (click)="onEngineFilter(item)"
+            >{{item.name}}
+            </button>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+    <div class="filters__apply-body shadow">
+      <button class="filters__btn-apply" mat-raised-button color="primary">
+          APLICAR FILTRO
+      </button>
+    </div>
+</div>
