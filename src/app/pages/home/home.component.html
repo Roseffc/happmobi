@@ -3,12 +3,15 @@
 
 <section class="homeBody">
   <div class="homeBody__filters">
-    <p>
-      <input class="homeBody__input shadow" type="text" value="" placeholder="Buscar carro"
+    <form [formGroup]="formSearch">
+      <input class="homeBody__input shadow"
+             type="text"
+             value=""
+             placeholder="Buscar carro"
+             formControlName="query"
          />
-         <!-- formControlName="username" -->
-    </p>
-    <button class="homeBody__button shadow">
+    </form>
+    <button class="homeBody__button shadow" routerLink="/filters">
       <svg xmlns="http://www.w3.org/2000/svg" width="23" height="19.5" viewBox="0 0 23 19.5">
         <g id="Grupo_296" data-name="Grupo 296" transform="translate(-295.75 -212.75)">
           <rect id="Retângulo_71" data-name="Retângulo 71" width="23" height="3.5" rx="1"
@@ -26,8 +29,6 @@
   <div>
     <swiper
       [config]="config"
-      (swiper)="onSwiper($event)"
-      (slideChange)="onSlideChange()"
       >
       <ng-template swiperSlide *ngFor="let item of listCars">
           <app-card-car [itemCar]="item"></app-card-car>

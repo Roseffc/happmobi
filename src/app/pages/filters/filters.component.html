@@ -19,24 +19,24 @@
           <form class="example-section" [formGroup]="formFilters">
             <div class="filters__tipos-checkbox">
               <div>
-                <p><mat-checkbox formControlName="hatchCompacto">hatchCompacto</mat-checkbox></p>
-                <p><mat-checkbox formControlName="hatchMedio">hatchMedio</mat-checkbox></p>
-                <p><mat-checkbox formControlName="suvCompacto">suvCompacto</mat-checkbox></p>
-                <p><mat-checkbox formControlName="suvMedio">suvMedio</mat-checkbox></p>
-                <p><mat-checkbox formControlName="suvGrande">suvGrande</mat-checkbox></p>
-                <p><mat-checkbox formControlName="crossover">crossover</mat-checkbox></p>
-                <p><mat-checkbox formControlName="coupe">coupe</mat-checkbox></p>
-                <p><mat-checkbox formControlName="picapeLeve">picapeLeve</mat-checkbox></p>
+                <p><mat-checkbox formControlName="16">hatchCompacto</mat-checkbox></p>
+                <p><mat-checkbox formControlName="15">hatchMedio</mat-checkbox></p>
+                <p><mat-checkbox formControlName="14">suvCompacto</mat-checkbox></p>
+                <p><mat-checkbox formControlName="3">suvMedio</mat-checkbox></p>
+                <p><mat-checkbox formControlName="9">suvGrande</mat-checkbox></p>
+                <p><mat-checkbox formControlName="8">crossover</mat-checkbox></p>
+                <p><mat-checkbox formControlName="7">coupe</mat-checkbox></p>
+                <p><mat-checkbox formControlName="6">picapeLeve</mat-checkbox></p>
               </div>
               <div>
-                <p><mat-checkbox formControlName="picapeLeveMedia">picapeLeveMedia</mat-checkbox></p>
-                <p><mat-checkbox formControlName="picapeMedia">picapeMedia</mat-checkbox></p>
-                <p><mat-checkbox formControlName="sedanCompacto">sedanCompacto</mat-checkbox></p>
-                <p><mat-checkbox formControlName="sedanMedio">sedanMedio</mat-checkbox></p>
-                <p><mat-checkbox formControlName="sedanGrande">sedanGrande</mat-checkbox></p>
-                <p><mat-checkbox formControlName="minivanMonovolume">minivanMonovolume</mat-checkbox></p>
-                <p><mat-checkbox formControlName="utilitarioLeve">utilitarioLeve</mat-checkbox></p>
-                <p><mat-checkbox formControlName="utilitario">utilitario</mat-checkbox></p>
+                <p><mat-checkbox formControlName="5">picapeLeveMedia</mat-checkbox></p>
+                <p><mat-checkbox formControlName="1">picapeMedia</mat-checkbox></p>
+                <p><mat-checkbox formControlName="2">sedanCompacto</mat-checkbox></p>
+                <p><mat-checkbox formControlName="13">sedanMedio</mat-checkbox></p>
+                <p><mat-checkbox formControlName="4">sedanGrande</mat-checkbox></p>
+                <p><mat-checkbox formControlName="12">minivanMonovolume</mat-checkbox></p>
+                <p><mat-checkbox formControlName="11">utilitarioLeve</mat-checkbox></p>
+                <p><mat-checkbox formControlName="10">utilitario</mat-checkbox></p>
               </div>
             </div>
           </form>
@@ -76,7 +76,7 @@
       </mat-accordion>
     </div>
     <div class="filters__apply-body shadow">
-      <button class="filters__btn-apply" mat-raised-button color="primary">
+      <button class="filters__btn-apply" mat-raised-button color="primary" (click)="applyFilters()">
           APLICAR FILTRO
       </button>
     </div>

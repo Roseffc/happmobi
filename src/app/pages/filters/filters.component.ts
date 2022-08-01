@@ -1,6 +1,7 @@
+import { Router } from '@angular/router';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { isNgTemplate } from '@angular/compiler';
+import { CarsService } from 'src/app/services/cars.service';
 
 @Component({
   selector: 'app-filters',
@@ -11,23 +12,25 @@ export class FiltersComponent implements OnInit {
 
   formFilters!: FormGroup;
   engineTypes = [
-    { name: 'Motor 1.0', active: false },
-    { name: 'Motor 1.4', active: false },
-    { name: 'Motor 1.6', active: false },
-    { name: 'Motor 1.8', active: false },
-    { name: 'Motor 2.0', active: false },
+    { name: 'Motor 1.0', value: '1.0', active: false },
+    { name: 'Motor 1.4', value: '1.4', active: false },
+    { name: 'Motor 1.6', value: '1.6', active: false },
+    { name: 'Motor 1.8', value: '1.8', active: false },
+    { name: 'Motor 2.0', value: '2.0', active: false },
   ]
 
   placeAmounts = [
-    { name: '02', active: false },
-    { name: '03', active: false },
-    { name: '04', active: false },
-    { name: '05', active: false },
-    { name: '06', active: false },
-    { name: '07', active: false },
+    { name: '02', value: '2', active: false },
+    { name: '03', value: '3', active: false },
+    { name: '04', value: '4', active: false },
+    { name: '05', value: '5', active: false },
+    { name: '06', value: '6', active: false },
+    { name: '07', value: '7', active: false },
   ]
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+              private carsService: CarsService,
+              private router: Router) { }
 
   ngOnInit() {
     this.setFormgroup()
@@ -35,22 +38,22 @@ export class FiltersComponent implements OnInit {
 
   setFormgroup(){
     this.formFilters = this.formBuilder.group({
-      hatchCompacto : [null],
-      hatchMedio : [null],
-      suvCompacto : [null],
-      suvMedio : [null],
-      suvGrande : [null],
-      crossover : [null],
-      coupe : [null],
-      picapeLeve : [null],
-      picapeLeveMedia : [null],
-      picapeMedia : [null],
-      sedanCompacto : [null],
-      sedanMedio : [null],
-      sedanGrande : [null],
-      minivanMonovolume : [null],
-      utilitarioLeve : [null],
-      utilitario : [null],
+      1 : [null],
+      2 : [null],
+      15 : [null],
+      14 : [null],
+      13 : [null],
+      12 : [null],
+      9 : [null],
+      8 : [null],
+      7 : [null],
+      6 : [null],
+      5 : [null],
+      3 : [null],
+      4 : [null],
+      16 : [null],
+      11 : [null],
+      10 : [null],
     })
   }
 
@@ -58,6 +61,18 @@ export class FiltersComponent implements OnInit {
     item.active = !item.active
   }
 
-
+  applyFilters() {
+    const types:any = [];
+    Object.keys(this.formFilters.value).forEach(key => {
+       if (this.formFilters.value[key]) {
+          types.push(key)
+       }
+    });
+    const engineFilters = this.engineTypes.filter(engine => engine.active)
+    const placeAmounts = this.placeAmounts.filter(place => place.active)
+    const filters = { types: types, engineFilters: engineFilters, placeAmounts: placeAmounts };
+    this.carsService.setFilter(filters);
+    this.router.navigate(['/home']);
+  }
 
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
+import { of, Subject } from 'rxjs';
 import { carsMock } from '../mock/cars-mock';
 
 @Injectable({
@@ -7,11 +7,23 @@ import { carsMock } from '../mock/cars-mock';
 })
 export class CarsService {
 
+filterApply$ = new Subject<any>();
+filterApply = {};
+
 constructor() {}
 
 getCars() {
   return of(carsMock)
 }
+
+setFilter(filter:any) {
+  this.filterApply = filter;
+}
+
+getFilter() {
+  return this.filterApply;
+}
+
 
 
 }
