@@ -1,6 +1,9 @@
 .login {
 
     &Body{
+        background-image: url("/assets/bg_logo.png");
+        background-repeat: no-repeat;
+        background-position-x: right;
         background-color: #1D2B3A;
         height: 100vh;
         display: flex;
@@ -19,7 +22,7 @@
 
             &:focus-visible {
                 outline: none;
-        
+
             }
         }
         &__link {
@@ -28,7 +31,7 @@
                 color: #ffff;
             }
         }
-        
+
         &__button {
             height: 63px;
             width: 354px;
@@ -47,6 +50,7 @@
 .logo {
     color: #ffff;
     text-align: center;
-    margin-bottom: 50px;
-}
+    margin-bottom: 65px;
+    text-align: center;
+  }
 
