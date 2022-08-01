@@ -1,7 +1,7 @@
-<div class="cardCar">
-  <img class="cardCar__img" src="assets/cars/1.png" alt="">
-  <h3 class="cardCar__title">Toro - 2016</h3>
-  <p class="cardCar__description">Picape média</p>
-  <p class="cardCar__description mt-10">Motor 1.6</p>
-  <p class="cardCar__description">5 Lugares</p>
+<div class="cardCar shadow">
+  <img class="cardCar__img" [src]="'assets/cars/'+itemCar.id+'.png'" alt="">
+  <h3 class="cardCar__title">{{ itemCar.name }} - {{ itemCar.year }}</h3>
+  <p class="cardCar__description">{{ itemCar.type }}</p>
+  <p class="cardCar__description mt-10">{{ itemCar.engine }}</p>
+  <p class="cardCar__description">{{ itemCar.size }} Lugares</p>
 </div>

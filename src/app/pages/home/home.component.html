@@ -2,9 +2,57 @@
   <app-header></app-header>
 
 <section class="homeBody">
+  <div class="homeBody__filters">
+    <p>
+      <input class="homeBody__input shadow" type="text" value="" placeholder="Buscar carro"
+         />
+         <!-- formControlName="username" -->
+    </p>
+    <button class="homeBody__button shadow">
+      <svg xmlns="http://www.w3.org/2000/svg" width="23" height="19.5" viewBox="0 0 23 19.5">
+        <g id="Grupo_296" data-name="Grupo 296" transform="translate(-295.75 -212.75)">
+          <rect id="Retângulo_71" data-name="Retângulo 71" width="23" height="3.5" rx="1"
+            transform="translate(295.75 212.75)" fill="#c61d35" />
+          <rect id="Retângulo_72" data-name="Retângulo 72" width="15" height="3.5" rx="1"
+            transform="translate(299.75 220.5)" fill="#c61d35" />
+          <rect id="Retângulo_73" data-name="Retângulo 73" width="6" height="3.5" rx="1"
+            transform="translate(304.25 228.75)" fill="#c61d35" />
+        </g>
+      </svg>
+      <span class="homeBody__filtrar">Filtrar</span>
+    </button>
+  </div>
+  <h2 class="homeBody__title2">Últimas reservas</h2>
+  <div>
+    <swiper
+      [config]="config"
+      (swiper)="onSwiper($event)"
+      (slideChange)="onSlideChange()"
+      >
+      <ng-template swiperSlide *ngFor="let item of listCars">
+          <app-card-car [itemCar]="item"></app-card-car>
+       </ng-template>
+    </swiper>
+  </div>
+  <div class="homeBody__qrcode">
+    <button class="homeBody__buttonqr" mat-raised-button color="primary">
+      <svg id="noun-qr-scanner-3555977" xmlns="http://www.w3.org/2000/svg" width="34.474" height="34.474" viewBox="0 0 34.474 34.474">
+        <path id="Caminho_2018" data-name="Caminho 2018" d="M412.9,112H406v4.6H412.9v6.895h4.6V116.6a4.6,4.6,0,0,0-4.6-4.6Z" transform="translate(-383.018 -112)" fill="#fff"/>
+        <path id="Caminho_2019" data-name="Caminho 2019" d="M182,116.6v6.895h4.6V116.6h6.895V112H186.6a4.6,4.6,0,0,0-4.6,4.6Z" transform="translate(-182 -111.999)" fill="#fff"/>
+        <path id="Caminho_2020" data-name="Caminho 2020" d="M186.6,336H182v6.895a4.6,4.6,0,0,0,4.6,4.6h6.895v-4.6H186.6Z" transform="translate(-181.999 -313.017)" fill="#fff"/>
+        <path id="Caminho_2021" data-name="Caminho 2021" d="M412.9,342.9H406v4.6H412.9a4.6,4.6,0,0,0,4.6-4.6V336h-4.6Z" transform="translate(-383.018 -313.018)" fill="#fff"/>
+        <path id="Caminho_2022" data-name="Caminho 2022" d="M327.6,257.6h4.6v4.6h-4.6Z" transform="translate(-312.661 -242.661)" fill="#fff"/>
+        <path id="Caminho_2023" data-name="Caminho 2023" d="M372.4,212.8H377v4.6h-4.6Z" transform="translate(-352.864 -202.458)" fill="#fff"/>
+        <path id="Caminho_2024" data-name="Caminho 2024" d="M282.8,212.8h4.6v4.6h-4.6Z" transform="translate(-272.458 -202.458)" fill="#fff"/>
+        <path id="Caminho_2025" data-name="Caminho 2025" d="M372.4,302.4H377V307h-4.6Z" transform="translate(-352.864 -282.865)" fill="#fff"/>
+        <path id="Caminho_2026" data-name="Caminho 2026" d="M282.8,302.4h4.6V307h-4.6Z" transform="translate(-272.458 -282.865)" fill="#fff"/>
+      </svg>
+      <span class="homeBody__qrname">
+        Acessar por QR code
+      </span>
+    </button>
 
-  <app-card-car></app-card-car>
-
+  </div>
 </section>
 
 <app-footer></app-footer>

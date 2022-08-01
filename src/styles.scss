@@ -114,7 +114,15 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @import './app/styles/custom-material.scss';
+@import './app/styles/base.scss';
+@import '~swiper/scss';
+@import '~swiper/scss/navigation';
+@import '~swiper/scss/pagination';
 
 .m-0 {
   margin: 0;
+}
+
+.swiper-wrapper {
+  padding: 10px;
 }
