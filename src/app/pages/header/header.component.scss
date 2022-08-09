@@ -1,20 +1,26 @@
 .headerHome {
-  background-color:#1D2B3A;
+  background-color: #1D2B3A;
   height: 364px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-image: url("/assets/img_home.png");
+  background-position: 95vw 0vh;
 
   &__img {
     height: 121px;
     width: 123px;
+    border: solid 2px #C61D35;
+    border-radius: 50%;
   }
 
   &__title {
     color: #ffff;
     font-size: 21px;
+    font-family: 'Franklin Gothic Medium';
+    margin-top: 9px;
   }
 
 }

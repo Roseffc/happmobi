@@ -119,6 +119,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 @import '~swiper/scss/navigation';
 @import '~swiper/scss/pagination';
 
+$font-family:"Poppins-Regular";
+
 .m-0 {
   margin: 0!important;
 }
@@ -126,3 +128,29 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .swiper-wrapper {
   padding: 10px;
 }
+
+@font-face {
+  font-family: $font-family;
+  src: url("/assets/fonts/Poppins-Regular.ttf");
+}
+.text-poppins-regular {
+  font-family: $font-family;
+}
+
+// ::-webkit-input-placeholder  {
+//   color:#4C4;
+//   font-size: 18px;
+//   font: "Poppins-Regular"!important;
+
+//  }
+
+//  ::-webkit-input-placeholder {
+//   color: orange;
+//   font: 12px verdana;
+// }
+
+
+
+
+// input:-moz-placeholder { color:#4C4; }
+
