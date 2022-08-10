@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 0px -1px 4px 0 #888888;
+  box-shadow: 0px -9px 14px rgb(0 0 0 / 9%);
 
   &__icon {
     color: #1D2B3A;
@@ -19,9 +19,7 @@
 
     &--active {
       color: #c61d35;
-
     }
-
   }
 }
 

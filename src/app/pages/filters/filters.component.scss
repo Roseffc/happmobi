@@ -2,7 +2,6 @@
 
   &__header {
     height: 200px;
-    width: 428px;
     background-color: #1D2B3A;
     width: 100%;
     display: flex;
@@ -12,8 +11,12 @@
 
   &__title {
     color: #ffff;
-    font-size: 20px ;
+    font-size: 20px;
     margin-left: 6.1px;
+  }
+
+  &__title2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   &__tipos-checkbox {
@@ -43,16 +46,20 @@
     background-color: #C61D35;
     color: #fff;
   }
+
   &__btn-apply {
     width: 354px;
     height: 56px;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 19px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
+
   &__apply-body {
     display: flex;
     justify-content: center;
     height: 101px;
+    margin-top: 32px;
   }
 
 }

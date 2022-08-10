@@ -111,7 +111,7 @@ $happmobi-theme: mat.define-light-theme((
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: "Helvetica Neue", sans-serif; }
 
 @import './app/styles/custom-material.scss';
 @import './app/styles/base.scss';
@@ -125,8 +125,9 @@ $font-family:"Poppins-Regular";
   margin: 0!important;
 }
 
-.swiper-wrapper {
-  padding: 10px;
+.swiper {
+  height: 190px;
+  padding: 5px 10px;
 }
 
 @font-face {
@@ -136,21 +137,4 @@ $font-family:"Poppins-Regular";
 .text-poppins-regular {
   font-family: $font-family;
 }
-
-// ::-webkit-input-placeholder  {
-//   color:#4C4;
-//   font-size: 18px;
-//   font: "Poppins-Regular"!important;
-
-//  }
-
-//  ::-webkit-input-placeholder {
-//   color: orange;
-//   font: 12px verdana;
-// }
-
-
-
-
-// input:-moz-placeholder { color:#4C4; }
 

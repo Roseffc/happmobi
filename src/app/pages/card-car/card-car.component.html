@@ -1,7 +1,7 @@
-<div class="cardCar shadow">
-  <img class="cardCar__img" [src]="'assets/cars/'+itemCar.id+'.png'" alt="">
-  <h3 class="cardCar__title">{{ itemCar.name }} - {{ itemCar.year }}</h3>
+<div class="cardCar shadow m-0">
+  <div class="cardCar__img" [style.background-image]="'url(assets/cars/'+itemCar.id+'.png)'"></div>
+  <h3 class="cardCar__title m-0">{{ itemCar.name }} - {{ itemCar.year }}</h3>
   <p class="cardCar__description">{{ itemCar.type }}</p>
-  <p class="cardCar__description mt-10">{{ itemCar.engine }}</p>
+  <p class="cardCar__description">{{ itemCar.engine }}</p>
   <p class="cardCar__description">{{ itemCar.size }} Lugares</p>
 </div>

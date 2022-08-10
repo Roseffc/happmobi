@@ -1,6 +1,29 @@
+@import '../../app/styles/fonts.scss';
 .mat-raised-button {
     border-radius: 32px!important;
 }
 .mat-raised-button.mat-button-disabled.mat-button-disabled{
     background-color: rgb(198 29 53 / 50%);
 }
+
+.mat-checkbox {
+  font-family: $font-family, "Helvetica Neue", sans-serif!important;
+}
+
+.mat-expansion-panel-header {
+  background-color: rgb(195 185 181 / 13%) !important;
+  height: 55px;
+}
+
+.mat-expansion-indicator::after {
+  color: #C61D35;
+}
+
+.mat-expansion-panel-body {
+  padding: 13px 24px 16px!important;
+}
+
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+  box-shadow: none!important;
+}
+

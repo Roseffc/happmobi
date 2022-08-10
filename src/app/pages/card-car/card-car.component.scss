@@ -1,36 +1,37 @@
 .cardCar {
-  width: 100%;
-  max-width: 162px;
-  min-width: 140px;
-  padding: 16px;
+  width: 162px;
+  height: 181px;
   border-radius: 24px;
   text-align: center;
   box-sizing: border-box;
   font-size: 10px;
-  line-height: 1!important;
-
+  line-height: 1 !important;
+  font-family: "Helvetica";
 
   &__img {
-    width: 113px;
-    height: 85px;
+    width: 144px;
+    height: 82px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    padding: 9px 0;
   }
 
   &__title {
     font-weight: bold;
-    margin-bottom: 9px!important;
-    font-size: 10px!important;
-    line-height: 1!important;
+    margin-bottom: 9px !important;
+    font-size: 10px !important;
+    line-height: 1 !important;
     margin-top: 7px;
-
+    font-family: "Helvetica";
   }
 
   &__description {
     margin-bottom: 8px;
-
+    font-size: 10px;
   }
 
 }
-
 .mt-10 {
   margin-bottom: 10px;
 }

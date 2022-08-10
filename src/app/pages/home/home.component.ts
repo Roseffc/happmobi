@@ -13,8 +13,9 @@ export class HomeComponent implements OnInit {
 
   config: SwiperOptions = {
     slidesPerView: 2,
-    spaceBetween: 50,
+    spaceBetween: 20,
     navigation: false,
+    // centeredSlides: true,
     pagination: { clickable: true },
     scrollbar: { draggable: true },
   };

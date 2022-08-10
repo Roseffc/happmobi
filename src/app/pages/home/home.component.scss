@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     position: absolute;
-    top: 7px;
+    top: 2px;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -14,11 +14,14 @@
   &__input {
     border-radius: 10px;
     height: 56px;
+    // width: 100%;
     width: 226px;
-    padding: 0 0 0 22px;
+    padding: 0 0 0 52px;
     box-sizing: border-box;
     border: 0;
     margin-right: 14px;
+    color: #1D2B3A;
+    font-size: 14px;
 
     &:focus-visible {
       outline: none;
@@ -39,10 +42,16 @@
 
   &__filtrar {
     margin-left: 8.5px;
+    color: #1D2B3A;
+    font-size: 16px;
   }
 
   &__title2 {
     font-size: 16px;
+    font-family: 'Franklin Gothic Medium';
+    color: #1D2B3A;
+    padding-left: 10px;
+    margin-bottom: 44px;
   }
 
   &__buttonqr {
@@ -60,5 +69,20 @@
     display: flex;
     justify-content: center;
   }
+  &__swiper {
+    display: flex;
+    justify-content: center;
+
+  }
+}
+
+.input-container {
+  position: relative;
+}
+
+.icon_search {
+  position: absolute;
+  left: 19px;
+  top: 16px;
 }
 
